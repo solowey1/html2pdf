@@ -96,18 +96,6 @@ app.use('/api/', verifyApiKey); // Применение middleware к вашим
 app.use(morgan('combined')); // 'combined' предоставляет детальные логи
 app.use(bodyParser.json());
 
-
-const { Pool } = require('pg');
-
-// Настройка подключения к базе данных
-const pool = new Pool({
-  user: 'myappuser', // Имя пользователя БД
-  host: 'localhost', // Хост БД
-  database: 'myappdb', // Имя БД
-  password: 'mypassword', // Пароль от БД
-  port: 5432, // Порт БД
-});
-
 // Функция для шаблонизации HTML
 function applyTemplate(html, variables) {
     const template = handlebars.compile(html);
