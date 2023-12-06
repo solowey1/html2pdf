@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const { Pool } = require('pg');
+const cors = require('cors');
 const rateLimit = require('express-rate-limit');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
@@ -91,6 +92,7 @@ const s3 = new AWS.S3({
 });
 
 const app = express();
+app.use(cors()); // Использование CORS
 app.use('/api/', apiLimiter); // Применение лимитера к API
 app.use('/api/', verifyApiKey); // Применение middleware к вашим маршрутам
 app.use(morgan('combined')); // 'combined' предоставляет детальные логи
