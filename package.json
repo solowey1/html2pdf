@@ -1,0 +1,25 @@
+{
+  "name": "certit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1511.0",
+    "axios": "^1.6.2",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "handlebars": "^4.7.8",
+    "morgan": "^1.10.0",
+    "nanoid": "^5.0.4",
+    "pg": "^8.11.3",
+    "puppeteer": "^21.5.2"
+  }
+}
